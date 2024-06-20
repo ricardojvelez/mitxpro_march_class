@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
-//import Sample from "./Sample";
-//import Euro2024App from "./Euro2024App/Euro2024App";
-import Euro2024AppRefactoredWithComponents from "./Euro2024App/Euro2024RefactoredWithComponents";
-//import "bootstrap/dist/css/bootstrap.min.css";
-
+import UseStateWithButton from "./W12/UseStateWithButton";
+import UseEffectWithCountTracker from "./W12/UseEffectWithCountTracker";
+import ChangingStyleButton from "./W12/ChangingStyleButton";
+import GameOfThrones from "./W12/GameOfThrones";
 const App = () => {
-  // return <Euro2024App />;
-  return <Euro2024AppRefactoredWithComponents />;
+  return <GameOfThrones />;
 };
 
 export default App;
