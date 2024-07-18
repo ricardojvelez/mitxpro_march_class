@@ -1,15 +1,12 @@
 import React from "react";
 import "./App.css";
-import UseStateWithButton from "./W12/UseStateWithButton";
-import UseEffectWithCountTracker from "./W12/UseEffectWithCountTracker";
-import ChangingStyleButton from "./W12/ChangingStyleButton";
-import GameOfThrones from "./W12/GameOfThrones";
-import { ParentToChild } from "./W16/ParentToChild";
-import { ChildToParent } from "./W16/ChildToParent";
-import HierarchyTree from "./W16/RecursiveExample/HierarchyTree";
+
+import { FetchComponent } from "./W15/FetchComponent";
+import { AxiosComponent } from "./W15/AxiosComponent";
+import FetchComponentSinglePokemon from "./W15/FetchComponentSinglePokemon";
 
 const App = () => {
-  return <ParentToChild />;
+  return <FetchComponentSinglePokemon />;
 };
 
 export default App;
