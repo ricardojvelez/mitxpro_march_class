@@ -10,6 +10,7 @@ export const FetchComponent = () => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://pokeapi.co/api/v2/pokemon");
+
         if (response.ok) {
           const data = await response.json();
           setPokemonList(data.results);
