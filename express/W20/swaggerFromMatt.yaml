@@ -1,0 +1,85 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  description: Sample API with GET, POST, PUT, and DELETE methods
+  version: 1.0.0
+paths:
+  /api/resource:
+    get:
+      summary: Retrieve a resource
+      description: Returns a resource from the database
+      responses:
+        200:
+          description: A resource
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                    description: The resource's ID
+                  name:
+                    type: string
+                    description: The resource's name
+                  description:
+                    type: string
+                    description: The resource's description
+    post:
+      summary: Create a new resource
+      description: Creates a new resource in the database
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The name of the resource
+                description:
+                  type: string
+                  description: The description of the resource
+      responses:
+        201:
+          description: Resource created successfully
+    put:
+      summary: Update an existing resource
+      description: Updates an existing resource in the database
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID of the resource to update
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: The updated name of the resource
+                description:
+                  type: string
+                  description: The updated description of the resource
+      responses:
+        200:
+          description: Resource updated successfully
+    delete:
+      summary: Delete an existing resource
+      description: Deletes an existing resource from the database
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: ID of the resource to delete
+          schema:
+            type: integer
+      responses:
+        204:
+          description: Resource deleted successfully
